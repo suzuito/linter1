@@ -1,6 +1,5 @@
 # Go言語の静的解析のお勉強用
 
-
 ## なにから勉強したら良いか？
 
 Go言語の静的解析ツールを作る場合、普通はgo/analysisパッケージを用いて作る。
@@ -55,6 +54,12 @@ go/analysisパッケージを用いて書かれたLinterの例
 - [golangci-lintで提供されているLinterたち](https://github.com/golangci/golangci-lint/tree/master/pkg/golinters)
 
 # Memo
+
+## linterのスケルトンコード生成
+
+```bash
+NAME=linter01 make linter
+```
 
 ### ソースコード
 
