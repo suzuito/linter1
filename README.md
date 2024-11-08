@@ -50,6 +50,10 @@ ASTがあれば、Goは型情報を割り当てることができる(らしい)�
 [go/types](https://pkg.go.dev/go/types)
 (tenntennさんの「静的解析とコード生成」スライドの「型チェック」を読むと良いかも。)
 
+## golanci-lintへの組み込み
+
+https://golangci-lint.run/plugins/go-plugins
+
 ## 教材
 
 自分で作るよりも、すでにあるものを読むほうが早いかもれん。

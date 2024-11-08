@@ -15,8 +15,8 @@ var Analyzer = &analysis.Analyzer{
 	// 名前
 	Name: "linter2",
 
-	// 概要説明(正直、どこで使われてるのかよくわからん)
-	Doc: `linter2 is boolean variable naming checker\n\n
+	// 概要説明
+	Doc: `linter2 is boolean variable naming checker
 like https://detekt.dev/docs/rules/naming/#booleanpropertynaming
 `,
 

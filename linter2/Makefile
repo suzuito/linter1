@@ -5,5 +5,8 @@ vettool: vettool.out
 vettool.out: $(shell find . -name "*.go")
 	go build -o $@ cmd/vettool/*.go
 
+single.out: $(shell find . -name "*.go")
+	go build -o $@ cmd/vettool/*.go
+
 test:
 	go test ./...
