@@ -111,6 +111,7 @@ func check(
 	if types.Identical(paramType, types.Typ[types.Bool]) ||
 		types.Identical(paramType, types.Typ[types.UntypedBool]) {
 		if matched := pattern.MatchString(paramName.Name); !matched {
+			// Reportf関数によってLinterのアサーションを出力する
 			pass.Reportf(
 				paramName.Pos(),
 				"a boolean variable does not match pattern",
