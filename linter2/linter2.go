@@ -10,20 +10,25 @@ import (
 	"golang.org/x/tools/go/ast/inspector"
 )
 
-const doc = `linter2 is boolean variable naming checker`
-
-var pattenString = "^(is|has|are)"
-var pattern = regexp.MustCompile(pattenString)
-
-// Analyzer is ...
+// 静的解析処理の定義
 var Analyzer = &analysis.Analyzer{
+	// 名前
 	Name: "linter2",
-	Doc:  doc,
-	Run:  run,
+	// 概要説明(どこで使われてるのかよくわからん)
+	Doc: `linter2 is boolean variable naming checker`,
+	// 静的解析処理をする関数(開発者の主な仕事はこの関数を作ること！)
+	Run: run,
+	// この静的解析処理が依存する別の静的解析処理
+	// go/analyticsの目的の1つは、静的解析処理の再利用性を高めること
+	// ある静的解析処理の結果を別の静的解析処理でも利用できる仕組みがRequires
+	// ここに指定した静的解析処理の結果を、analysis.Pass.ResultOf変数から取り出して利用できる
 	Requires: []*analysis.Analyzer{
 		inspect.Analyzer,
 	},
 }
+
+var pattenString = "^(is|has|are)"
+var pattern = regexp.MustCompile(pattenString)
 
 func run(pass *analysis.Pass) (any, error) {
 	inspect := pass.ResultOf[inspect.Analyzer].(*inspector.Inspector)
