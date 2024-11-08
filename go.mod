@@ -1,6 +1,6 @@
 module github.com/suzuito/linter1
 
-go 1.23
+go 1.23.3
 
 require (
 	github.com/gostaticanalysis/testutil v0.4.0

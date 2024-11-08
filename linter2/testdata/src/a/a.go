@@ -32,5 +32,6 @@ func f(
 	v007 := v006 && areHoge // want "a boolean variable does not match pattern"
 	hasFoo := v006 && areHoge
 	fmt.Println(v007, hasFoo)
+
 	return v006, areHoge, nil
 }
