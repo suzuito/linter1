@@ -18,6 +18,9 @@ vettool.out: $(shell find . -name "*.go")
 # linter2.so: $(shell find . -name "*.go")
 # 	go build -buildmode=plugin -o linter2.so plugin/golangci-lint/main.go
 # なのですが、Go Pluginを用いる方法はかなりダルく挫折
+# Module Pluginを用いるほうが楽です
+
+# (3) Module Plugin System
 
 test:
 	go test ./...
