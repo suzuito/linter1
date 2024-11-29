@@ -57,6 +57,12 @@ func run(pass *analysis.Pass) (any, error) {
 		(*ast.Field)(nil),
 		(*ast.AssignStmt)(nil),
 	) {
+		pass.Reportf(
+			current.Pos(),
+			"foo1112 %+v",
+			pass,
+		)
+		continue
 		// (2) 型チェック
 		// pass.TypesInfoを用いて型チェックする
 		// 型チェックすることで変数の型がブール値であるかどうかを判定できる
