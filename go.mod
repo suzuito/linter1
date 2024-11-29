@@ -3,6 +3,7 @@ module github.com/suzuito/linter1
 go 1.23.3
 
 require (
+	github.com/golangci/plugin-module-register v0.1.1
 	github.com/gostaticanalysis/testutil v0.4.0
 	golang.org/x/tools v0.27.0
 )
