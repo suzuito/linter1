@@ -8,8 +8,15 @@ import (
 	"golang.org/x/tools/go/analysis/analysistest"
 )
 
-// TestAnalyzer is a test for Analyzer.
+// 静的解析ツールのテストコード
+// testdataディレクトリ配下にあるソースコードを入力として静的解析ツールを動かします
+
 func TestAnalyzer(t *testing.T) {
-	testdata := testutil.WithModules(t, analysistest.TestData(), nil)
-	analysistest.Run(t, testdata, linter2.Analyzer, "a")
+	// この行がなにやってるかはあんまり詳しく見てない
+	dirPathTestdata := testutil.WithModules(t, analysistest.TestData(), nil)
+	// この行でテストを実行します
+	analysistest.Run(t, dirPathTestdata, linter2.Analyzer, "a")
+
+	// 期待値はテスト対象となっているGoのソースコードの中に記述されています。
+	// testdata/src/a/a.go を参照してください。
 }
