@@ -50,9 +50,17 @@ ASTがあれば、Goは型情報を割り当てることができる(らしい)�
 [go/types](https://pkg.go.dev/go/types)
 (tenntennさんの「静的解析とコード生成」スライドの「型チェック」を読むと良いかも。)
 
-## golanci-lintへの組み込み
+## golangci-lintとの連携
 
 https://golangci-lint.run/plugins/go-plugins
+
+### [linterをgolangci-lintへ公式に追加する](https://golangci-lint.run/contributing/new-linters/#how-to-add-a-public-linter-to-golangci-lint)
+### [私的なlinterをgolangci-lintから呼び出す](https://golangci-lint.run/contributing/new-linters/#how-to-add-a-private-linter-to-golangci-lint)
+
+[Go Plugin System](https://golangci-lint.run/plugins/go-plugins)による方法はおすすめしない。理由は、[こちら](https://speakerdeck.com/kuro_kurorrr/golangci-lint-module-plugin-system)とかに書いてあるが、やってみるとわかるが、めちゃんこ面倒くさい。
+
+[Module Plugin System](https://golangci-lint.run/plugins/module-plugins)がおすすめ。
+とはいえ、この方法も「カスタムなgolangci-lintをビルドする」という部分が辛いことは変わらないため、私的なlinterをgolangci-lintから実行しないようにする、という結論も普通にアリ。
 
 ## 教材
 

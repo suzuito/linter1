@@ -34,5 +34,6 @@ func (t *linterPlugin) BuildAnalyzers() ([]*analysis.Analyzer, error) {
 }
 
 func (t *linterPlugin) GetLoadMode() string {
-	return register.LoadModeSyntax
+	// return register.LoadModeSyntax
+	return register.LoadModeTypesInfo
 }

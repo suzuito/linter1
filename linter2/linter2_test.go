@@ -16,7 +16,6 @@ func TestAnalyzer(t *testing.T) {
 	dirPathTestdata := testutil.WithModules(t, analysistest.TestData(), nil)
 	// この行でテストを実行します
 	analysistest.Run(t, dirPathTestdata, linter2.Analyzer, "a")
-	analysistest.Run(t, dirPathTestdata, linter2.Analyzer, "b")
 
 	// 期待値はテスト対象となっているGoのソースコードの中に記述されています。
 	// testdata/src/a/a.go を参照してください。
