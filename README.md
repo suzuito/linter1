@@ -60,7 +60,7 @@ https://golangci-lint.run/plugins/go-plugins
 [Go Plugin System](https://golangci-lint.run/plugins/go-plugins)による方法はおすすめしない。理由は、[こちら](https://speakerdeck.com/kuro_kurorrr/golangci-lint-module-plugin-system)とかに書いてあるが、やってみるとわかるが、めちゃんこ面倒くさい。
 
 [Module Plugin System](https://golangci-lint.run/plugins/module-plugins)がおすすめ。
-とはいえ、この方法も「カスタムなgolangci-lintをビルドする」という部分が辛いことは変わらないため、私的なlinterをgolangci-lintから実行しないようにする、という結論も普通にアリ。
+とはいえ、この方法も「カスタムなgolangci-lintをビルドする」という部分が辛い(ビルドは30秒ぐらいかかるので、私的なLinterを書き換えたらビルドが必要というのは、けっこうダルい)ことは変わらないため、私的なlinterをgolangci-lintから実行しないようにする、という結論も普通にアリ。
 
 ## 教材
 
