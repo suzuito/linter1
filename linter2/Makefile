@@ -21,6 +21,7 @@ vettool.out: $(shell find . -name "*.go")
 # Module Pluginを用いるほうが楽です
 
 # (3) Module Plugin System
+# https://github.com/suzuito/example_linter_target001
 
 test:
 	go test ./...
